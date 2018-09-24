@@ -67,7 +67,7 @@ var tasksApp = new Vue({
   methods: {
     handleWorkForm(e) {
       // TODO: Check validity
-      e.preventDefault();
+      e.preventDefault(); //don't need this if prevented w/ Vue in HTML
       console.log(e);
       alert(JSON.stringify(this.workForm));
 
