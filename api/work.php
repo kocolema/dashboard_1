@@ -1,5 +1,16 @@
 <?php
 
+//get the taskID
+$taskId = $_GET ['taskId'] ?? 0;
+
+//fetch work from database
+$work = Work::findByTaskId(taskId);
+
+//convert to json and print
+echo json_encode($work);
+
+/*
+
 $foo = "bar\n";
 $bar = 'bit\n';
 $bit = 'baz';
@@ -56,3 +67,4 @@ $n = $_GET['id'] ?? 0;
 
 //same thing in javascript
 n = foo || default
+*/
