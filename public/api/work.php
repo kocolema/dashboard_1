@@ -7,6 +7,7 @@ $taskId = $_GET ['taskId'] ?? 0;
 $work = Work::findByTaskId(taskId);
 
 //convert to json and print
+header('Content-type: application/json');
 echo json_encode($work);
 
 /*
@@ -67,4 +68,3 @@ $n = $_GET['id'] ?? 0;
 
 //same thing in javascript
 n = foo || default
-*/
